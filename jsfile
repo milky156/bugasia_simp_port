@@ -1,0 +1,46 @@
+// 1. Project & Skills Data
+const skills = ["HTML5", "CSS3", "JavaScript", "Git", "Responsive Design"];
+const projects = [
+    { title: "Inventory System", desc: "Track stock levels in real-time.", link: "#" },
+    { title: "Auth Module", desc: "Secure login system with JS.", link: "#" },
+    { title: "Data Viz", desc: "Charts and graphs for analytics.", link: "#" }
+];
+
+// 2. Render Skills
+const skillsContainer = document.getElementById('skillsContainer');
+skills.forEach(skill => {
+    skillsContainer.innerHTML += `<span class="chip">${skill}</span>`;
+});
+
+// 3. Render Projects
+const grid = document.getElementById('projectGrid');
+projects.forEach(p => {
+    grid.innerHTML += `
+        <div class="card">
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+            <a href="${p.link}" style="color:var(--primary); text-decoration:none;">View System →</a>
+        </div>
+    `;
+});
+
+// 4. Dark Mode Toggle Logic
+const toggle = document.getElementById('themeToggle');
+const icon = toggle.querySelector('i');
+
+toggle.addEventListener('click', () => {
+    const isDark = document.body.hasAttribute('data-theme');
+    if (isDark) {
+        document.body.removeAttribute('data-theme');
+        icon.classList.replace('fa-sun', 'fa-moon');
+    } else {
+        document.body.setAttribute('data-theme', 'dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+    }
+});
+
+// 5. Contact Form Alert
+document.getElementById('contactForm').onsubmit = (e) => {
+    e.preventDefault();
+    alert("Message sent! (This is a demo, check out Formspree for real emails)");
+};

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio | System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="themeToggle" class="floating-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <nav>
+        <div class="logo">Dev<span>System</span></div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Building <span class="highlight">Digital Solutions</span></h1>
+        <p>Full-stack capabilities with a focus on clean code.</p>
+        <div class="skills-chips" id="skillsContainer">
+            </div>
+    </header>
+
+    <section id="projects">
+        <h2>System Projects</h2>
+        <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+    <div class="contact-card">
+        <h2>Let's Connect</h2>
+        <p>I'm currently open to new opportunities and collaborations.</p>
+        
+        <div class="social-links">
+            <a href="mailto:bugasiam@gmail.com" class="social-btn email">
+                <span>📧</span> Email Me
+            </a>
+
+            <a href="https://github.com/yourusername" target="_blank" class="social-btn github">
+                <span>🐙</span> GitHub
+            </a>
+
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn linkedin">
+                <span>💼</span> LinkedIn
+            </a>
+
+            <a href="https://facebook.com/yourusername" target="_blank" class="social-btn facebook">
+                <span>👥</span> Facebook
+            </a>
+        </div>
+    </div>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
