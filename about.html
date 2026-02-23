@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Side | DevSystem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Dev<span>Life</span></div>
+        <ul>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="index.html#contact" class="nav-contact">Back to Work</a></li>
+        </ul>
+    </nav>
+
+    <header class="personal-hero">
+        <h1>Beyond the <span class="highlight">Code</span></h1>
+        <p>A glimpse into my life, interests, and what keeps me motivated.</p>
+    </header>
+
+    <main class="container">
+        <section class="personal-grid">
+    <div class="bio-card">
+        <div class="bio-text">
+            <h2>Who am I?</h2>
+            <p>
+                I am a dedicated <strong>BSIT Student</strong> currently in my <strong>3rd year</strong> 
+                at <strong>Father Saturnino Urios University (FSUU)</strong>. 
+                As a Urian, I strive for excellence both in my academics and my personal coding projects.
+            </p>
+            <p>
+                I am proudly based in <strong>San Vicente, Butuan City, Agusan del Norte, Philippines</strong>. 
+                Living in the "Home of the Balangays" inspires me to build digital vessels-systems and 
+                applications that can navigate the complex waters of the modern tech world.
+            </p>
+        </p> 
+        When I'm not debugging or designing systems, you'll probably find me exploring new technologies or enjoying my downtime in the Philippines.
+        I believe that being a great developer isn't just about syntax it's about perspective. Here’s what my world looks like outside of VS Code.
+        </p>
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt"></i> Butuan City, PH
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="hobbies" class="hobbies-wrapper">
+            <h2>My Interests</h2>
+            <div class="hobby-cards">
+               <div class="hobby-item clickable" id="gamingCard">
+    <span>🎮</span>
+    <h3>Gaming</h3>
+    <p>Click to see my favorites!</p>
+</div>
+
+<div id="gameModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        
+        <div class="game-tabs">
+            <button class="tab-btn active" onclick="openGame(event, 'ml')">ML</button>
+            <button class="tab-btn" onclick="openGame(event, 'gta')">GTA</button>
+            <button class="tab-btn" onclick="openGame(event, 'db')">Dragon Ball</button>
+        </div>
+
+        <div id="ml" class="game-category" style="display: block;">
+            <h3>Mobile Legends</h3>
+            <p class="game-reason">Strategy and teamwork focus.</p>
+            <div class="swipe-container">
+                <img src="ml2.png" class="swipe-img">
+                <img src="ml1.png" class="swipe-img">
+            </div>
+        </div>
+
+        <div id="gta" class="game-category">
+            <h3>GTA Vice City</h3>
+            <p class="game-reason">Nostalgic 80s vibes.</p>
+            <div class="swipe-container">
+                <img src="vice1.png" class="swipe-img">
+                <img src="vice2.png" class="swipe-img">
+            </div>
+        </div>
+
+        <div id="db" class="game-category">
+            <h3>Budokai</h3>
+            <p class="game-reason">Relieving stress after FSUU classes.</p>
+            <div class="swipe-container">
+                <img src="db-1.png" class="swipe-img">
+                <img src="db-2.png" class="swipe-img">
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="hobby-item">                  
+                    <h3>Photography</h3>
+                    <p>Capturing moments and finding beauty in the details.</p>
+                </div>
+                <div class="hobby-item">
+                    <h3>Coffee Enthusiast</h3>
+                    <p>The fuel behind every successful deployment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
