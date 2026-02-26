@@ -1,116 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Home Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | Mil Kieven Bugasia</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <div id="themeToggle" class="floating-toggle">
-        <i class="fas fa-moon"></i>
-    </div>
 
-    <nav>
-        <div class="logo">Dev<span>portfolio</span></div>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="nav-contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <header class="hero">
-        <h1>Mil kieven Bugasia</h1>
-        <p>Student Developer | Problem Solver | Tech Enthusiast</p>
-        <p>Full-stack capabilities with a focus on clean code.</p>
-        <div class="skills-chips" id="skillsContainer">
-            </div>
-    </header>
+<nav>
 
-    <section id="projects">
-        <h2>System Projects</h2>
-        <div class="project-grid" id="projectGrid"></div>
-    </section>
-    <section id="about">
-       <section id="about" class="about-section">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        
-        <div class="about-grid">
-            <div class="about-card">
-                <div class="icon-box"><i class="fas fa-user-code"></i></div>
-                <h3>A Student Developer</h3>
-                <p>
-I'm a passionate student developer with a knack for crafting clean, efficient code. My journey in programming has been driven by a desire to solve real-world problems and create impactful digital solutions. With a strong foundation in both front-end and back-end technologies, I thrive on building applications that are not only functional but also maintainable and scalable.
+<h2>Portfolio</h2>
 
-                </p>
-            </div>
+<ul>
 
-            <div class="about-card highlight-card">
-                <div class="icon-box"><i class="fas fa-rocket"></i></div>
-                <h3>Why Hire Me?</h3>
-                <ul class="benefit-list">
-                    <li><strong>Problem Solver:</strong> I don't just write code; I build solutions to real-world problems.</li>
-                    <li><strong>Clean Architect:</strong> I prioritize maintainability and scalable "Clean Code" principles.</li>
-                    <li><strong>Continuous Learner:</strong> In the fast-paced tech world, I stay ahead by mastering the latest frameworks.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+<li><a href="index.html">Home</a></li>
 
-<div class="stats-bar">
-    <div class="stat-item">
-        <span class="stat-number" id="daysCoding">365+</span>
-        <span class="stat-label">Days of Coding</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Projects Completed</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-number">∞</span>
-        <span class="stat-label">Caffeine Consumed</span>
-    </div>
+<li><a href="about.html">About</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<header class="home-hero">
+	<div class="profile-image">
+		<img src="me.png" alt="Mil Kieven Bugasia" class="profile-img">
+	</div>
+	<h1>Mil Kieven Bugasia</h1>
+	<div class="hero-bio">
+    <p>I am a passionate 3rd year BSIT student at Father Saturnino Urios University, committed to continuously improving my skills in software development and technology. As a Urian, I aim to achieve excellence both academically and through hands-on personal projects that strengthen my problem-solving and programming abilities. I am driven to design and develop innovative systems and applications challenges and contribute to the evolving digital world.
+</p>
+	</div>
+</header>
+
+
+
+
+<section>
+
+
+<h2>Recent Projects</h2>
+
+
+<div class="project-container">
+
+
+<button class="project-card" onclick="openProject('inventory')">
+
+Inventory Management System
+
+</button>
+
+
 </div>
-    <section id="contact">
-        <div class="contact-container">
-            <h2>Get In Touch</h2>
-            <form id="contactForm">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your Message" rows="5"></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-   
-    <section id="contact" class="container">
-    <div class="contact-card">
-        <h2>Let's Connect</h2>
-        <p>I'm currently open to new opportunities and collaborations.</p>
-        
-        <div class="social-links">
-            <a href="mailto:bugasiam@gmail.com" class="social-btn email">
-                <span>📧</span> Email Me
-            </a>
 
-            <a href="https://github.com/milky156" target="_blank" class="social-btn github">
-                <span>🐙</span> GitHub
-            </a>
 
-            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn linkedin">
-                <span>💼</span> LinkedIn
-            </a>
-
-            <a href="https://facebook.com/kievenmil.bugasia" target="_blank" class="social-btn facebook">
-                <span>👥</span> Facebook
-            </a>
-        </div>
-    </div>
 </section>
-    <script src="script.js"></script>
+
+
+
+
+
+
+<div id="projectPopup" class="popup">
+
+
+<div class="popup-content">
+
+
+<button onclick="closeProject()" class="close-btn">Close</button>
+
+
+<div id="projectDetails"></div>
+
+
+<div id="imageSlider" class="image-slider">
+
+<div class="slider-container">
+
+<img src="Websystem1.png" alt="Project Image 1" class="slider-img">
+
+<img src="Websystem2.png" alt="Project Image 2" class="slider-img">
+
+<img src="Websystem3.png" alt="Project Image 3" class="slider-img">
+
+</div>
+
+<button class="slider-btn prev" onclick="prevImage()">❮</button>
+
+<button class="slider-btn next" onclick="nextImage()">❯</button>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills-container">
+
+<div class="skills-card">
+
+<h3>Technical Skills</h3>
+
+<ul>
+
+<li>Programming fundamentals</li>
+
+<li>Web development (HTML, CSS, JavaScript)</li>
+
+<li>Basic backend and database concepts</li>
+
+<li>Version control (Git & GitHub)</li>
+
+<li>Debugging and problem-solving</li>
+
+</ul>
+
+</div>
+
+<div class="skills-card">
+
+<h3>Professional Skills</h3>
+
+<ul>
+
+<li>Analytical and critical thinking</li>
+
+<li>Adaptability and continuous learning</li>
+
+<li>Attention to detail</li>
+
+<li>Time management and organization</li>
+
+<li>Team collaboration and communication</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+
+<a href="mailto:mil.bugasia@urios.edu.ph.com" class="btn">Email</a>
+
+<a href="https://github.com/milky156" class="btn" target="_blank">GitHub</a>
+
+<a href="https://facebook.com/kievenmil.bugasia/" class="btn" target="_blank">Facebook</a>
+
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
 </body>
 </html>

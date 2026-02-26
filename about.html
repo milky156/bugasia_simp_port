@@ -3,108 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Side | DevSystem</title>
+    <title>Portfolio | About</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav>
-        <div class="logo">Dev<span>Life</span></div>
+        <h2>Portfolio
+        </h2>
         <ul>
-            <li><a href="index.html">Portfolio</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="index.html#contact" class="nav-contact">Back to Work</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="personal-hero">
-        <h1>Beyond the <span class="highlight">Code</span></h1>
-        <p>A glimpse into my life, interests, and what keeps me motivated.</p>
-    </header>
+
+    <section class="personal-hero">
+        <div class="profile-image">
+            <img src="me.png" alt="Your Name" class="profile-img">
+        </div>
+        <h1>Mil Kieven Bugasia</h1>
+        <div class="hero-bio">
+            <p>When I'm not debugging or designing systems, you'll probably find me exploring new technologies or enjoying my downtime in the Philippines. I believe that being a great developer isn't just about syntax; it's about perspective. Here’s what my world looks like outside of VS Code.</p>
+        </div>
+    </section>
 
     <main class="container">
-        <section class="personal-grid">
-    <div class="bio-card">
-        <div class="bio-text">
-            <h2>Who am I?</h2>
-            <p>
-                I am a dedicated <strong>BSIT Student</strong> currently in my <strong>3rd year</strong> 
-                at <strong>Father Saturnino Urios University (FSUU)</strong>. 
-                As a Urian, I strive for excellence both in my academics and my personal coding projects.
-            </p>
-            <p>
-                I am proudly based in <strong>San Vicente, Butuan City, Agusan del Norte, Philippines</strong>. 
-                Living in the "Home of the Balangays" inspires me to build digital vessels-systems and 
-                applications that can navigate the complex waters of the modern tech world.
-            </p>
-        </p> 
-        When I'm not debugging or designing systems, you'll probably find me exploring new technologies or enjoying my downtime in the Philippines.
-        I believe that being a great developer isn't just about syntax it's about perspective. Here’s what my world looks like outside of VS Code.
-        </p>
-            <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> Butuan City, PH
-            </div>
-        </div>
-    </div>
-</section>
+        <section class="bio-card">
+        </section>
 
         <section id="hobbies" class="hobbies-wrapper">
             <h2>My Interests</h2>
             <div class="hobby-cards">
-               <div class="hobby-item clickable" id="gamingCard">
-    <span>🎮</span>
-    <h3>Gaming</h3>
-    <p>Click to see my favorites!</p>
-</div>
-
-<div id="gameModal" class="modal-overlay" style="display: none;">
-    <div class="modal-content">
-        <span class="close-modal" id="closeModal">&times;</span>
-        
-        <div class="game-tabs">
-            <button class="tab-btn active" onclick="openGame(event, 'ml')">ML</button>
-            <button class="tab-btn" onclick="openGame(event, 'gta')">GTA</button>
-            <button class="tab-btn" onclick="openGame(event, 'db')">Dragon Ball</button>
-        </div>
-
-        <div id="ml" class="game-category" style="display: block;">
-            <h3>Mobile Legends</h3>
-            <p class="game-reason">Strategy and teamwork focus.</p>
-            <div class="swipe-container">
-                <img src="ml2.png" class="swipe-img">
-                <img src="ml1.png" class="swipe-img">
-            </div>
-        </div>
-
-        <div id="gta" class="game-category">
-            <h3>GTA Vice City</h3>
-            <p class="game-reason">Nostalgic 80s vibes.</p>
-            <div class="swipe-container">
-                <img src="vice1.png" class="swipe-img">
-                <img src="vice2.png" class="swipe-img">
-            </div>
-        </div>
-
-        <div id="db" class="game-category">
-            <h3>Budokai</h3>
-            <p class="game-reason">Relieving stress after FSUU classes.</p>
-            <div class="swipe-container">
-                <img src="db-1.png" class="swipe-img">
-                <img src="db-2.png" class="swipe-img">
-            </div>
-        </div>
-    </div>
-</div>
-                <div class="hobby-item">                  
-                    <h3>Photography</h3>
-                    <p>Capturing moments and finding beauty in the details.</p>
-                </div>
-                <div class="hobby-item">
-                    <h3>Coffee Enthusiast</h3>
-                    <p>The fuel behind every successful deployment.</p>
-                </div>
+                <div class="hobby-item simple-btn" id="gamesBtn">Games</div>
+                <div class="hobby-item simple-btn" id="photoBtn">Photography</div>
+                <div class="hobby-item simple-btn" id="coffeeBtn">Coffee</div>
             </div>
         </section>
+        <div id="gamesModal" class="modal-overlay" style="display:none;">
+            <div class="modal-content">
+                <button class="close-btn" id="closeGames">Close</button>
+                <h3>Games</h3>
+                <div class="modal-group">
+                    <div class="modal-group-title">Mobile Legends</div>
+                    <img src="ml1.png" class="modal-img">
+                    <img src="ml2.png" class="modal-img">
+                </div>
+                <div class="modal-group">
+                    <div class="modal-group-title">GTA Vice City</div>
+                    <img src="vicecity1.png" class="modal-img">
+                    <img src="vicecity2.png" class="modal-img">
+                </div>
+                <div class="modal-group">
+                    <div class="modal-group-title">Dragon Ball Budokai</div>
+                    <img src="budokai.png" class="modal-img">
+                    <img src="budokai2.png" class="modal-img">
+                </div>
+            </div>
+        </div>
+        <div id="photoModal" class="modal-overlay" style="display:none;">
+            <div class="modal-content">
+                <button class="close-btn" id="closePhoto">Close</button>
+                <h3>Photography</h3>
+                <div class="modal-group">
+                    <img src="landscape1.png" class="modal-img">
+                    <img src="landscape2.png" class="modal-img">
+                    <img src="landscape3.png" class="modal-img">
+                </div>
+                <div class="modal-group">
+                    <img src="landscape4.png" class="modal-img">
+                    <img src="landscape5.png" class="modal-img">
+                    <img src="landscape6.png" class="modal-img">
+                </div>
+            </div>
+        </div>
+        <div id="coffeeModal" class="modal-overlay" style="display:none;">
+            <div class="modal-content">
+                <button class="close-btn" id="closeCoffee">Close</button>
+                <h3>Coffee Moments</h3>
+                <div class="modal-group">
+                    <img src="coffee1.png" class="modal-img">
+                    <img src="coffee2.png" class="modal-img">
+                    <img src="coffee3.png" class="modal-img">
+                </div>
+                <div class="modal-group">
+                    <img src="coffee4.png" class="modal-img">
+                    <img src="coffee5.png" class="modal-img">
+                    <img src="coffee6.png" class="modal-img">
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>
